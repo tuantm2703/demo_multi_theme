@@ -1,4 +1,5 @@
 import 'package:demo_multitheme/component/app_scaffold.dart';
+import 'package:demo_multitheme/main.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -6,6 +7,12 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold();
+    return AppScaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          appTheme.toggleTheme();
+        },
+      ),
+    );
   }
 }
