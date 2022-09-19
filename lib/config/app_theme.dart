@@ -9,7 +9,7 @@ class AppTheme with ChangeNotifier{
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: AppColor.black,
+    scaffoldBackgroundColor: AppColor.black1B1B1B,
   );
 
   static bool isDarkTheme = false;

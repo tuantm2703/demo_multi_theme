@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppScaffold extends StatelessWidget {
-  Widget? body;
-  FloatingActionButton? floatingActionButton;
-  AppScaffold({Key? key,this.body,this.floatingActionButton}) : super(key: key);
+  final Widget? body;
+  final bool? resizeToAvoidBottomInset;
+  final FloatingActionButton? floatingActionButton;
+
+  const AppScaffold({Key? key, this.body, this.floatingActionButton, this.resizeToAvoidBottomInset = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       body: body,
       floatingActionButton: floatingActionButton,
     );
