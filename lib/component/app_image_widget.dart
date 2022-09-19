@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class AppImageWidget extends StatelessWidget {
   final String path;
@@ -17,9 +18,17 @@ class AppImageWidget extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       );
+    } else if (path.contains('.svg')) {
+      return SizedBox(
+        height: height,
+        width: width,
+        child: SvgPicture.asset(
+          path,
+          fit: BoxFit.cover,
+        ),
+      );
     } else {
       return const SizedBox.shrink();
     }
-    return Container();
   }
 }

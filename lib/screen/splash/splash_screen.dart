@@ -46,11 +46,6 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     appTheme.toggleTheme();
-      //   },
-      // ),
     );
   }
 }
