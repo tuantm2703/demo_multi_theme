@@ -4,8 +4,10 @@ class AppScaffold extends StatelessWidget {
   final Widget? body;
   final bool? resizeToAvoidBottomInset;
   final FloatingActionButton? floatingActionButton;
+  final Widget? bottomNavigationBar;
 
-  const AppScaffold({Key? key, this.body, this.floatingActionButton, this.resizeToAvoidBottomInset = false})
+  const AppScaffold(
+      {Key? key, this.body, this.floatingActionButton, this.resizeToAvoidBottomInset = false, this.bottomNavigationBar})
       : super(key: key);
 
   @override
@@ -13,6 +15,7 @@ class AppScaffold extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       body: body,
+      bottomNavigationBar: bottomNavigationBar,
       floatingActionButton: floatingActionButton,
     );
   }

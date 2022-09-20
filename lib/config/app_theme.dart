@@ -9,7 +9,9 @@ class AppTheme with ChangeNotifier{
     textTheme: const TextTheme(
       headline4: TextStyle(color: AppColor.dark100),
     ),
-
+    iconTheme: IconThemeData(
+      color: AppColor.grayNavy300,
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -18,6 +20,9 @@ class AppTheme with ChangeNotifier{
     scaffoldBackgroundColor: AppColor.black1B1B1B,
     textTheme: const TextTheme(
       headline4: TextStyle(color: AppColor.darkModePrimary),
+    ),
+    iconTheme: IconThemeData(
+      color: AppColor.tertiary,
     ),
   );
 

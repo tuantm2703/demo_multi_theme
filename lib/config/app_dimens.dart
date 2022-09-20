@@ -16,8 +16,11 @@ class AppDimens{
 
   //Width
   static final double width16 = 16.w;
+  static final double width34 = 34.w;
 
   //Height
+  static final double height18 = 18.h;
+  static final double height21 = 21.h;
   static final double height44 = 44.h;
   static final double height80 = 80.h;
 

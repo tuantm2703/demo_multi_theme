@@ -5,3 +5,7 @@ hideKeyboard() {
 }
 
 bool isNullEmpty(Object? o) => o == null || "" == o || o == "null";
+
+enum ButtonStatus {
+  initial, loading, done
+}

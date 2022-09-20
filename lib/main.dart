@@ -29,7 +29,6 @@ class _DemoMultiThemeAppState extends State<DemoMultiThemeApp> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,overlays: [SystemUiOverlay.top]);
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       minTextAdapt: true,
