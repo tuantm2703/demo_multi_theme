@@ -14,6 +14,6 @@ class AppRoute {
     splash: (context) => const SplashScreen(),
     login: (context) => const LoginScreen(),
     dashboard: (context) => const DashboardScreen(),
-    home: (context) => const HomeScreen(),
+    home: (context) => HomeScreen(),
   };
 }

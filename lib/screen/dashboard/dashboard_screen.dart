@@ -6,6 +6,7 @@ import 'package:demo_multitheme/config/app_color.dart';
 import 'package:demo_multitheme/config/app_dimens.dart';
 import 'package:demo_multitheme/main.dart';
 import 'package:demo_multitheme/screen/dashboard/home_screen.dart';
+import 'package:demo_multitheme/utils/app_util.dart';
 import 'package:flutter/material.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget buildNavigationBarItem({required String path, required BuildContext context, required int index}) {
     bool isSelected = selectedTab == index;
     return AppTouchableWidget(
-      onTap: (){
+      onTap: () {
         setState(() {
           selectedTab = index;
         });
@@ -31,7 +32,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         width: AppDimens.space20,
         height: AppDimens.space20,
         svgIconColor: isSelected
-            ? (appTheme.currentTheme == ThemeMode.dark ? AppColor.darkModePrimary : AppColor.darkNavy900)
+            ? (isCurrentLightTheme() ? AppColor.darkNavy900 : AppColor.darkModePrimary)
             : Theme.of(context).iconTheme.color,
       ),
     );
@@ -43,7 +44,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
       body: IndexedStack(
         index: selectedTab,
         children: [
-          const HomeScreen(),
+          HomeScreen(
+            moveTab: (){
+              setState(() {
+                selectedTab = 1;
+              });
+            },
+          ),
           Container(),
           Container(),
           Container(),

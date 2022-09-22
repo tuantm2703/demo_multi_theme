@@ -1,3 +1,4 @@
+import 'package:demo_multitheme/main.dart';
 import 'package:flutter/material.dart';
 
 hideKeyboard() {
@@ -5,6 +6,8 @@ hideKeyboard() {
 }
 
 bool isNullEmpty(Object? o) => o == null || "" == o || o == "null";
+
+bool isCurrentLightTheme() => appTheme.currentTheme == ThemeMode.light;
 
 enum ButtonStatus {
   initial, loading, done
